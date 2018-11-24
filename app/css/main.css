@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Mono', monospace;
+}
+
+* ::after, * ::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  height: 56px;
+  background-color: #ffa94f;
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 1000px) {
+  header {
+    padding: 0 15%;
+  }
+}
+
+header nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon {
+  color: #fff;
+  font-size: 2em;
+}
+
+.user-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.user-icon-arrow {
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid #fff;
+}
+
+.user-icon {
+  font-size: 0.8em;
+  color: #ffa94f;
+}
+
+.default-link {
+  text-decoration: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+ul.header-navigation {
+  display: flex;
+  list-style: none;
+}
+
+ul.header-navigation li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 25px;
+  opacity: 0.7;
+  font-weight: 600;
+}
+
+ul.header-navigation li:last-child {
+  margin-right: 0;
+}
+
+ul.header-navigation li:hover {
+  opacity: 1;
+}
+
+ul.header-navigation li.active {
+  opacity: 1;
+}
+
+ul.header-navigation li.user-icons {
+  cursor: pointer;
+}

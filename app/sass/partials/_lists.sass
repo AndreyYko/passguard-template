@@ -1,0 +1,18 @@
+ul.header-navigation
+  display: flex
+  list-style: none
+  li
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-right: 25px
+    opacity: 0.7
+    font-weight: $text-bold
+    &:last-child
+      margin-right: 0
+    &:hover
+      opacity: 1
+  li.active
+      opacity: 1
+  li.user-icons
+    cursor: pointer

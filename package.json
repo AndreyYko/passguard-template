@@ -12,5 +12,9 @@
     "browser-sync": "^2.26.3",
     "gulp": "^3.9.1",
     "gulp-sass": "^4.0.2"
+  },
+  "devDependencies": {
+    "install": "^0.12.2",
+    "npm": "^6.4.1"
   }
 }
