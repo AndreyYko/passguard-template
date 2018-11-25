@@ -75,11 +75,14 @@ section.mobile-menu div {
 }
 
 section.mobile-menu .divider {
-  display: block;
   width: 95%;
+  margin-left: 5%;
+}
+
+.divider {
+  display: block;
   height: 1px;
   background-color: #eee;
-  margin-left: 5%;
 }
 
 section.mobile-menu.opened {
@@ -112,6 +115,31 @@ section.mobile-menu.opened {
 
 section.page-content {
   min-width: 100%;
+}
+
+section.drop-down {
+  display: none;
+  position: absolute;
+}
+
+section.user-drop-down {
+  top: 35px;
+  right: 0;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+}
+
+section.user-drop-down .divider {
+  width: 100%;
+}
+
+section.user-drop-down .signed-us-label {
+  font-size: 0.7em;
+}
+
+section.user-drop-down .signed-us-value {
+  font-size: 0.85em;
+  color: #6c757d;
 }
 
 header {
@@ -175,6 +203,17 @@ header nav {
   margin-right: 15px;
 }
 
+.signed-us-icon {
+  border-radius: 50%;
+  background-color: #333;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  vertical-align: middle;
+  color: #fff;
+  user-select: none;
+}
+
 .default-link {
   color: #fff;
 }
@@ -188,8 +227,23 @@ header nav {
   padding-left: 20px;
 }
 
+section.user-drop-down .mobile-navigation-link {
+  font-size: 0.9em;
+  font-weight: 400;
+  padding: 2.5px 0 2.5px 10px;
+}
+
+section.user-drop-down .mobile-navigation-link.signed-us-wrapper:hover {
+  background-color: transparent;
+}
+
+section.user-drop-down .mobile-navigation-link:hover {
+  background-color: #eee;
+}
+
 ul.header-navigation {
   display: flex;
+  position: relative;
 }
 
 ul.header-navigation li {
@@ -215,6 +269,7 @@ ul.header-navigation li.active {
 
 ul.header-navigation li.user-icons {
   cursor: pointer;
+  margin-right: 0;
 }
 
 ul.mobile-navigation {
@@ -226,4 +281,16 @@ ul.mobile-navigation li {
   display: flex;
   width: 100%;
   height: 50px;
+}
+
+section.user-drop-down ul.mobile-navigation {
+  width: 150px;
+  box-sizing: padding-box;
+}
+
+section.user-drop-down ul.mobile-navigation li {
+  height: auto;
+  margin-right: 0;
+  opacity: 1;
+  padding: 5px 0;
 }
