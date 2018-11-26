@@ -26,7 +26,7 @@ section.mobile-menu
 .divider
   display: block
   height: 1px
-  background-color: $gray-light
+  background-color: $black-opacity
 
 section.mobile-menu.opened
   border-right-width: 2px
@@ -49,11 +49,12 @@ section.page-content
 section.drop-down
   display: none
   position: absolute
+  border-radius: $border-radius-default
   
 section.user-drop-down
   top: 35px
   right: 0
-  border: 1px solid rgba(0, 0, 0, 0.15)
+  border: 1px solid $black-opacity
   background-color: #fff
   .divider
     width: 100%
@@ -73,15 +74,32 @@ main
   justify-content: space-between
 
 .container
-  height: 100px
+  flex: 1
 
 .middle-container
-  flex: 1
   width: 100%
   background-color: pink
 
 .left-container,
 .right-container
-  flex: 1
-  max-width: 25%
-  background-color: green
+  max-width: calc(25% - 2px)
+  border: 1px solid $black-opacity
+  -webkit-border-radius: $border-radius-default
+  overflow: hidden
+  .title
+    height: 40px
+    background-color: $black-super-opacity
+    display: flex
+    align-items: center
+    padding: 0 15px
+    font-size: 1em
+    span
+      font-size: 1em
+      font-weight: $text-bold
+      color: $gray-dark
+  .divider
+    width: 100%
+  .side-content-wrapper
+    padding: 15px
+
+
