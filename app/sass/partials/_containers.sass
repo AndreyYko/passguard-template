@@ -62,3 +62,26 @@ section.user-drop-down
   .signed-us-value
     font-size: 0.85em
     color: $gray-middle
+
+main
+  width: 100%
+  @media (min-width: 1000px)
+    padding: 0 15%
+  @media (max-width: 1000px)
+    padding: 0 5%
+  display: flex
+  justify-content: space-between
+
+.container
+  height: 100px
+
+.middle-container
+  flex: 1
+  width: 100%
+  background-color: pink
+
+.left-container,
+.right-container
+  flex: 1
+  max-width: 25%
+  background-color: green

@@ -142,9 +142,44 @@ section.user-drop-down .signed-us-value {
   color: #6c757d;
 }
 
+main {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width: 1000px) {
+  main {
+    padding: 0 15%;
+  }
+}
+
+@media (max-width: 1000px) {
+  main {
+    padding: 0 5%;
+  }
+}
+
+.container {
+  height: 100px;
+}
+
+.middle-container {
+  flex: 1;
+  width: 100%;
+  background-color: pink;
+}
+
+.left-container,
+.right-container {
+  flex: 1;
+  max-width: 25%;
+  background-color: green;
+}
+
 header {
   height: 56px;
-  background-color: #ffa94f;
+  background-color: #f4a53d;
   display: flex;
   align-items: center;
 }
@@ -191,7 +226,7 @@ header nav {
 
 .user-icon {
   font-size: 0.8em;
-  color: #ffa94f;
+  color: #f4a53d;
 }
 
 .mobile-logo {
