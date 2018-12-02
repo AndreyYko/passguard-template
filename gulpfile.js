@@ -21,4 +21,5 @@ gulp.task('browser-sync', () => {
 
 gulp.task('watch', ['browser-sync', 'sass'], () => {
   gulp.watch('app/sass/**/*.sass', ['sass'])
+  gulp.watch('app/**/*.html', browserSync.reload)
 })

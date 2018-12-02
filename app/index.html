@@ -6,9 +6,240 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-
+  <section class="mobile mobile-menu">
+    <!--Mobile menu top side-->
+    <div>
+      <span class="logo">
+        <i class="fas fa-shield-alt icon mobile-logo"></i>
+        <span>PassGuard</span>
+      </span>
+      <nav>
+        <ul class="mobile-navigation">
+          <li>
+            <a href="" class="mobile-navigation-link">
+              <i class="far fa-hdd mobile-nav-icon"></i>
+              <span>Storage</span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="mobile-navigation-link">
+              <i class="fas fa-wrench mobile-nav-icon"></i>
+              <span>Tools</span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="mobile-navigation-link">
+              <i class="fas fa-sliders-h mobile-nav-icon"></i>
+              <span>Settings</span>
+            </a>
+          </li>
+        </ul>
+        <span class="divider"></span>
+        <ul class="mobile-navigation">
+          <li>
+            <a href="" class="mobile-navigation-link">
+              <i class="far fa-user mobile-nav-icon"></i>
+              <span>Account</span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="mobile-navigation-link">
+              <i class="fas fa-question mobile-nav-icon"></i>
+              <span>Get help</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!--Mobile menu bottom side-->
+    <div>
+      <nav>
+        <ul class="mobile-navigation">
+          <li>
+            <a href="" class="mobile-navigation-link">
+              <i class="fas fa-lock mobile-nav-icon"></i>
+              <span>Lock</span>
+            </a>
+          </li>
+          <li>
+            <a href="" class="mobile-navigation-link">
+              <i class="fas fa-sign-out-alt mobile-nav-icon"></i>
+              <span>Log out</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+  <section class="page-content">
+    <!--Header-->
+    <header>
+      <!--PC header-->
+      <nav class="pc">
+        <ul class="header-navigation">
+          <li class="active">
+            <i class="fas fa-shield-alt icon"></i>
+          </li>
+          <li class="active">
+            <a href="" class="default-link">Storage</a>
+          </li>
+          <li>
+            <a href="" class="default-link">Tools</a>
+          </li>
+          <li>
+            <a href="" class="default-link">Settings</a>
+          </li>
+        </ul>
+        <ul class="header-navigation">
+          <li class="user-icons">
+            <span class="user-icon-wrapper">
+              <i class="fas fa-user user-icon"></i>
+            </span>
+            <span class="icon-arrow"></span>
+          </li>
+          <section class="drop-down user-drop-down">
+            <nav>
+              <ul class="mobile-navigation">
+                <li>
+                  <span class="mobile-navigation-link signed-us-wrapper">
+                    <span class="mobile-nav-icon signed-us-icon">A</span>
+                    <div>
+                      <span class="signed-us-label">Signed as</span>
+                      <span class="signed-us-value">Andrii</span>
+                    </div>
+                  </span>
+                </li>
+                <span class="divider"></span>
+                <li>
+                  <a href="" class="mobile-navigation-link">
+                    <i class="far fa-user mobile-nav-icon"></i>
+                    <span>Account</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="mobile-navigation-link">
+                    <i class="fas fa-question mobile-nav-icon"></i>
+                    <span>Get help</span>
+                  </a>
+                </li>
+                <span class="divider"></span>
+                <li>
+                  <a href="" class="mobile-navigation-link">
+                    <i class="fas fa-lock mobile-nav-icon"></i>
+                    <span>Lock</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="mobile-navigation-link">
+                    <i class="fas fa-sign-out-alt mobile-nav-icon"></i>
+                    <span>Log out</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </section>
+        </ul>
+      </nav>
+      <!--Mobile header-->
+      <nav class="mobile">
+        <ul class="header-navigation">
+          <li class="active">
+            <button class="open-mobile-menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </li>
+          <li class="active">
+            <span class="default-link">Storage</span>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="container left-container">
+        <h2 class="title">
+          <span>Filters</span>
+        </h2>
+        <span class="divider"></span>
+        <div class="side-content-wrapper">
+          <form class="left-container-search">
+            <input
+              type="text"
+              placeholder="Search in storage"
+              class="input-default"
+            >
+          </form>
+          <ul class="default-list first">
+            <li class="active">
+              <i class="fas fa-table"></i>
+              <span>All elements</span>
+            </li>
+            <li>
+              <i class="fas fa-star"></i>
+              <span>Favorite</span>
+            </li>
+          </ul>
+          <ul class="default-list">
+            <h3>Elements type</h3>
+            <li>
+              <i class="fas fa-globe"></i>
+              <span>Login</span>
+            </li>
+            <li>
+              <i class="far fa-credit-card"></i>
+              <span>Card</span>
+            </li>
+            <li>
+              <i class="far fa-id-card"></i>
+              <span>ID Card</span>
+            </li>
+            <li>
+              <i class="far fa-sticky-note"></i>
+              <span>Secure note</span>
+            </li>
+          </ul>
+          <ul class="default-list list-arrow">
+            <h3>Collections</h3>
+            <li>
+              <i class="fas fa-caret-right"></i>
+              <span>Collection 1</span>
+            </li>
+            <li>
+              <i class="fas fa-caret-right"></i>
+              <span>Collection 2</span>
+            </li>
+            <li>
+              <i class="fas fa-caret-right"></i>
+              <span>Collection 3</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="container middle-container"></section>
+      <section class="container right-container">
+        <h2 class="title">
+          <span>Organizations</span>
+        </h2>
+        <span class="divider"></span>
+        <div class="side-content-wrapper">
+          <ul class="default-list list-arrow first">
+            <li>
+              <i class="fas fa-caret-right"></i>
+              <span>Organization 1</span>
+            </li>
+            <li>
+              <i class="fas fa-caret-right"></i>
+              <span>Organization 2</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </section>
 </body>
 </html>

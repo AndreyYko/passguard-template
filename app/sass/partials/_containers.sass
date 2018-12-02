@@ -1,0 +1,106 @@
+section.mobile-menu
+  flex-direction: column
+  justify-content: space-between
+  align-items: flex-end
+  min-width: 0
+  max-width: 70vw
+  height: 100vh
+  border-right: 0 solid $gray-light
+  .logo
+    width: 100%
+    height: 150px
+    background-color: $gray-dark
+    display: flex
+    justify-content: center
+    align-items: center
+    span
+      color: #fff
+      font-weight: $text-bold
+      font-size: 1.5em
+  div
+    min-width: calc(70vw - 2px)
+  .divider
+    width: 95%
+    margin-left: 5%
+
+.divider
+  display: block
+  height: 1px
+  background-color: $black-opacity
+
+section.mobile-menu.opened
+  border-right-width: 2px
+
+.mobile
+  @media (max-width: 425px)
+    display: flex
+  @media (min-width: 426px)
+    display: none
+
+.pc
+  @media (max-width: 425px)
+    display: none
+  @media (min-width: 426px)
+    display: flex
+
+section.page-content
+  min-width: 100%
+
+section.drop-down
+  display: none
+  position: absolute
+  border-radius: $border-radius-default
+  
+section.user-drop-down
+  top: 35px
+  right: 0
+  border: 1px solid $black-opacity
+  background-color: #fff
+  .divider
+    width: 100%
+  .signed-us-label
+    font-size: 0.7em
+  .signed-us-value
+    font-size: 0.85em
+    color: $gray-middle
+
+main
+  width: 100%
+  @media (min-width: 1000px)
+    padding: 0 15%
+  @media (max-width: 1000px)
+    padding: 0 5%
+  display: flex
+  justify-content: space-between
+
+.container
+  flex: 1
+
+.middle-container
+  width: 100%
+  background-color: pink
+
+.left-container,
+.right-container
+  max-width: calc(25% - 2px)
+  border: 1px solid $black-opacity
+  -webkit-border-radius: $border-radius-default
+  overflow: hidden
+  .title
+    height: 40px
+    background-color: $black-super-opacity
+    display: flex
+    align-items: center
+    padding: 0 15px
+    font-size: 1em
+    span
+      font-size: 1em
+      font-weight: $text-bold
+      color: $gray-dark
+  .divider
+    width: 100%
+  .side-content-wrapper
+    padding: 15px
+  &-search
+    margin-bottom: 15px
+
