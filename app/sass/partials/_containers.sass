@@ -66,6 +66,7 @@ section.user-drop-down
 
 main
   width: 100%
+  min-height: calc(100vh - 176px)
   @media (min-width: 1000px)
     padding: 0 15%
   @media (max-width: 1000px)
@@ -84,7 +85,8 @@ main
 .right-container
   max-width: calc(25% - 2px)
   border: 1px solid $black-opacity
-  -webkit-border-radius: $border-radius-default
+  border-radius: $border-radius-default $border-radius-default 0 0
+  border-bottom: 0
   overflow: hidden
   .title
     height: 40px
