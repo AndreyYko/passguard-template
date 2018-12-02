@@ -38,9 +38,36 @@ section.user-drop-down
 
 .default-list
   width: 100%
-  margin-top: 15px
+  margin: 15px 0
+  &:last-child
+    margin-bottom: 0
+  &.first
+    margin-top: 0
   h3
     font-size: 0.9em
     font-weight: $text-regular
     color: $gray-dark-v2
     text-transform: uppercase
+    margin-bottom: 10px
+  li
+    display: flex
+    font-size: 0.85em
+    align-items: center
+    color: $gray-dark
+    margin-bottom: 3px
+    cursor: pointer
+    &:last-child
+      margin-bottom: 0
+    &.active
+      color: $orange-default
+      font-weight: $text-bold
+    &:hover
+      span
+        text-decoration: underline
+    i
+      width: 15px
+      margin-right: 10px
+  &.list-arrow
+    li
+      i
+        width: auto

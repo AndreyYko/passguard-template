@@ -205,6 +205,11 @@ main {
   padding: 15px;
 }
 
+.left-container-search,
+.right-container-search {
+  margin-bottom: 15px;
+}
+
 header {
   height: 56px;
   background-color: #f4a53d;
@@ -361,7 +366,15 @@ section.user-drop-down ul.mobile-navigation li {
 
 .default-list {
   width: 100%;
-  margin-top: 15px;
+  margin: 15px 0;
+}
+
+.default-list:last-child {
+  margin-bottom: 0;
+}
+
+.default-list.first {
+  margin-top: 0;
 }
 
 .default-list h3 {
@@ -369,6 +382,38 @@ section.user-drop-down ul.mobile-navigation li {
   font-weight: 400;
   color: #6c757d;
   text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.default-list li {
+  display: flex;
+  font-size: 0.85em;
+  align-items: center;
+  color: #333;
+  margin-bottom: 3px;
+  cursor: pointer;
+}
+
+.default-list li:last-child {
+  margin-bottom: 0;
+}
+
+.default-list li.active {
+  color: #f4a53d;
+  font-weight: 600;
+}
+
+.default-list li:hover span {
+  text-decoration: underline;
+}
+
+.default-list li i {
+  width: 15px;
+  margin-right: 10px;
+}
+
+.default-list.list-arrow li i {
+  width: auto;
 }
 
 .input-default {
@@ -379,6 +424,7 @@ section.user-drop-down ul.mobile-navigation li {
   border-radius: 5px;
   outline: none;
   transition: 0.2s;
+  font-size: 0.85em;
 }
 
 .input-default:focus {
