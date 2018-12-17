@@ -38,6 +38,7 @@ section.mobile-menu.opened
     display: none
 
 .pc
+  max-width: 980px
   @media (max-width: 425px)
     display: none
   @media (min-width: 426px)
@@ -45,9 +46,12 @@ section.mobile-menu.opened
 
 section.page-content
   min-width: 100%
+  display: flex
+  align-items: center
+  flex-direction: column
 
 section.drop-down
-  display: none
+  display: block
   position: absolute
   border-radius: $border-radius-default
   
@@ -64,11 +68,14 @@ section.user-drop-down
     font-size: 0.85em
     color: $gray-middle
 
+section.settings-drop-down
+  border: 1px solid $black-opacity
+  background-color: #fff
+
 main
   width: 100%
+  max-width: 980px
   min-height: calc(100vh - 176px)
-  @media (min-width: 1000px)
-    padding: 0 15%
   @media (max-width: 1000px)
     padding: 0 5%
   display: flex
@@ -79,14 +86,33 @@ main
 
 .middle-container
   width: 100%
-  background-color: pink
+  padding: 0 15px
+  .header
+    width: 100%
+    height: 27px
+    display: flex
+    justify-content: space-between
+    color: $gray-dark
+    padding-bottom: 0.6rem
+    border-bottom: 1px solid $gray-light-v3
+    box-sizing: content-box
+    h1
+      font-size: 1.5em
+      font-weight: $text-regular
+      line-height: 27px
+    .buttons
+      display: flex
+      position: relative
+
+  &-content
+    width: 100%
 
 .left-container,
 .right-container
   max-width: calc(25% - 2px)
+  max-height: fit-content
   border: 1px solid $black-opacity
-  border-radius: $border-radius-default $border-radius-default 0 0
-  border-bottom: 0
+  border-radius: $border-radius-default
   overflow: hidden
   .title
     height: 40px

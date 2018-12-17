@@ -9,3 +9,26 @@ button.open-mobile-menu
     height: 3px
     background-color: #fff
     border-radius: 15%
+
+button.default-button
+  padding: 3.5px 7px
+  background-color: $gray-light-v2
+  border: 1px solid $gray-middle-v2
+  -webkit-border-radius: 0.2rem
+  -moz-border-radius: 0.2rem
+  border-radius: 0.2rem
+  color: $gray-middle
+  cursor: pointer
+  font-weight: $text-bold
+  transition: all 0.2s
+  &:hover
+    background-color: $gray-middle-v2
+  &.settings
+    margin-right: 7px
+  &.add-item
+    color: $orange-default
+    &:hover
+      color: #fff
+      background-color: $orange-default
+      border-color: $orange-default
+
