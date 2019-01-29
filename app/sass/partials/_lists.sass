@@ -43,9 +43,11 @@ section.user-drop-down
   width: 100%
   margin: 15px 0
   &:last-child
+    margin-top: 0
     margin-bottom: 0
   &.first
     margin-top: 0
+    margin-bottom: 0
   h3
     font-size: 0.9em
     font-weight: $text-regular
@@ -74,3 +76,28 @@ section.user-drop-down
     li
       i
         width: auto
+
+section.settings-drop-down
+  ul
+    li
+      display: flex
+      justify-content: flex-start
+      align-items: center
+      height: auto
+      margin-right: 0
+      opacity: 1
+      padding: 10px
+      font-size: 0.9em
+      font-weight: $text-regular
+      white-space: nowrap
+      cursor: pointer
+      &:hover
+        background-color: $gray-light
+      &.delete
+        color: $red
+
+ul.default-items-list
+  width: 100%
+  li
+    width: 100%
+    height: 50px

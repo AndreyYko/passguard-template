@@ -10,6 +10,12 @@ footer
     display: flex
     justify-content: space-between
     align-items: center
+    @media (max-width: $resp-border)
+      flex-direction: column
+      justify-content: center
     span
       font-size: 0.85em
       color: $gray-dark
+      @media (max-width: $resp-border)
+        &:first-child
+          margin-bottom: 15px

@@ -222,33 +222,114 @@
         </div>
       </section>
       <section class="container middle-container">
-        <div class="header">
+        <!-- Middle container mobile lists with side containers content -->
+        <div class="mobile-sides-containers-content">
+          <div class="list-wrapper">
+            <div class="header">
+              <h2>Filters</h2>
+              <i class="fas fa-caret-down"></i>
+            </div>
+            <div class="side-content-wrapper mobile">
+              <form class="left-container-search">
+                <input
+                  type="text"
+                  placeholder="Search in storage"
+                  class="input-default"
+                >
+              </form>
+              <ul class="default-list first">
+                <li class="active">
+                  <i class="fas fa-table"></i>
+                  <span>All elements</span>
+                </li>
+                <li>
+                  <i class="fas fa-star"></i>
+                  <span>Favorite</span>
+                </li>
+              </ul>
+              <ul class="default-list">
+                <h3>Elements type</h3>
+                <li>
+                  <i class="fas fa-globe"></i>
+                  <span>Login</span>
+                </li>
+                <li>
+                  <i class="far fa-credit-card"></i>
+                  <span>Card</span>
+                </li>
+                <li>
+                  <i class="far fa-id-card"></i>
+                  <span>ID Card</span>
+                </li>
+                <li>
+                  <i class="far fa-sticky-note"></i>
+                  <span>Secure note</span>
+                </li>
+              </ul>
+              <ul class="default-list list-arrow">
+                <h3>Collections</h3>
+                <li>
+                  <i class="fas fa-caret-right"></i>
+                  <span>Collection 1</span>
+                </li>
+                <li>
+                  <i class="fas fa-caret-right"></i>
+                  <span>Collection 2</span>
+                </li>
+                <li>
+                  <i class="fas fa-caret-right"></i>
+                  <span>Collection 3</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="list-wrapper">
+            <div class="header">
+              <h2>Organizations</h2>
+              <i class="fas fa-caret-down"></i>
+            </div>
+          </div>
+        </div>
+        <!-- Middle container header -->
+        <div class="middle-container-header">
           <h1>Storage</h1>
           <div class="buttons">
-            <button class="default-button settings">
-              <i class="fas fa-cog"></i>
-              <i class="fas fa-caret-down"></i>
-            </button>
+            <div class="settings-container">
+              <button class="default-button settings">
+                <i class="fas fa-cog"></i>
+                <i class="fas fa-caret-down"></i>
+              </button>
+              <section class="drop-down settings-drop-down">
+                <nav>
+                  <ul>
+                    <li class="delete">
+                      <i class="fas fa-trash-alt mobile-nav-icon"></i>
+                      <span>Delete selected</span>
+                    </li>
+                    <span class="divider"></span>
+                    <li>
+                      <i class="fas fa-check-square mobile-nav-icon"></i>
+                      <span>Check all</span>
+                    </li>
+                    <li>
+                      <i class="far fa-check-square mobile-nav-icon"></i>
+                      <span>Uncheck all</span>
+                    </li>
+                  </ul>
+                </nav>
+              </section>
+            </div>
             <button class="default-button add-item">
               <i class="fas fa-plus"></i>
               <span>Add Item</span>
             </button>
-            <section class="drop-down settings-drop-down">
-              <nav>
-                <ul>
-                  <li>
-                    <a href="">
-                      <i class="far fa-user mobile-nav-icon"></i>
-                      <span>Account</span>
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-            </section>
           </div>
         </div>
+        <!-- Middle container content -->
         <div class="middle-container-content">
+          <ul class="default-items-list">
 
+          </ul>
         </div>
       </section>
       <section class="container right-container">
