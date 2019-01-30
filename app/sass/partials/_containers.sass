@@ -150,6 +150,8 @@ section.settings-drop-down
 .mobile-sides-containers-content
   width: 100%
   margin-bottom: 20px
+  @media (min-width: $resp-border)
+    display: none
   .list-wrapper
     width: 100%
     background-color: $gray-light-v2
@@ -172,9 +174,11 @@ section.settings-drop-down
         font-weight: $text-bold
         color: $gray-dark
     .side-content-wrapper
-      display: flex
+      display: none
       flex-direction: column
       align-items: center
+      &.opened
+        display: flex
       form
         width: 100%
       h3

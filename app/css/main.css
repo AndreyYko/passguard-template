@@ -306,6 +306,12 @@ section.settings-drop-down {
   margin-bottom: 20px;
 }
 
+@media (min-width: 768px) {
+  .mobile-sides-containers-content {
+    display: none;
+  }
+}
+
 .mobile-sides-containers-content .list-wrapper {
   width: 100%;
   background-color: #fbfbfb;
@@ -336,9 +342,13 @@ section.settings-drop-down {
 }
 
 .mobile-sides-containers-content .list-wrapper .side-content-wrapper {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
+}
+
+.mobile-sides-containers-content .list-wrapper .side-content-wrapper.opened {
+  display: flex;
 }
 
 .mobile-sides-containers-content .list-wrapper .side-content-wrapper form {
@@ -620,13 +630,50 @@ section.settings-drop-down ul li.delete {
   color: #dd4b39;
 }
 
-ul.default-items-list {
+ul.main-items-list {
   width: 100%;
 }
 
-ul.default-items-list li {
+ul.main-items-list li {
   width: 100%;
   height: 50px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  display: flex;
+  align-items: center;
+}
+
+ul.main-items-list li:last-child {
+  border-bottom: none;
+}
+
+ul.main-items-list li input[type="checkbox"] {
+  margin: 0 15px;
+}
+
+ul.main-items-list li i {
+  margin-right: 15px;
+}
+
+ul.main-items-list li .text {
+  display: flex;
+  flex-direction: column;
+}
+
+ul.main-items-list li .text h3 {
+  color: #3c8dbc;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+ul.main-items-list li .text h3:hover {
+  text-decoration: underline;
+}
+
+ul.main-items-list li .text span {
+  font-size: 0.7rem;
+  color: #6c757d;
 }
 
 .input-default {
