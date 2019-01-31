@@ -98,6 +98,7 @@ section.settings-drop-down
 
 ul.main-items-list
   width: 100%
+  margin-bottom: 50px
   li
     width: 100%
     height: 50px
@@ -125,3 +126,88 @@ ul.main-items-list
         font-size: 0.7rem
         color: $gray-middle
 
+ul.left-container-navigation-list
+  width: 100%
+  li
+    width: 100%
+    height: 40px
+    display: flex
+    align-items: center
+    padding-left: 15px
+    border-bottom: 1px solid $black-opacity
+    font-size: 0.9em
+    color: $orange-default
+    cursor: pointer
+    transition: 0.2s
+    &:hover
+      border-left: 3px solid $orange-default
+    &:last-child
+      border-bottom: none
+    &.active
+      border-left: 3px solid $orange-default
+      color: $gray-dark
+      font-weight: bold
+  &.mobile-drop-down
+    margin-bottom: 5px
+    display: none
+    &.opened
+      display: block
+    li
+      height: 50px
+      color: $gray-dark
+      &:hover
+        border-left: none
+      &.active
+        color: $orange-default
+        border-left: none
+
+ul.settings-organizations-list
+  width: 100%
+  margin-bottom: 50px
+  li
+    width: 100%
+    height: 50px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    border-bottom: 1px solid $black-opacity
+    padding: 0 15px
+    .title
+      display: flex
+      align-items: center
+      mark
+        width: 30px
+        height: 30px
+        background-color: lightgreen
+        -webkit-border-radius: 50%
+        -moz-border-radius: 50%
+        border-radius: 50%
+        text-align: center
+        line-height: 30px
+        font-size: 0.9em
+        font-weight: 700
+        color: #fff
+        margin-right: 20px
+        -webkit-user-select: none
+        -moz-user-select: none
+        -ms-user-select: none
+        user-select: none
+        cursor: default
+      span
+        color: $orange-default
+        cursor: pointer
+        &:hover
+          text-decoration: underline
+    .button-wrapper
+      position: relative
+      button
+        display: none
+        &.visible
+          display: block
+    &:hover
+      background-color: $black-super-opacity
+      .button-wrapper
+        button
+          display: block
+    &:last-child
+      border-bottom: none

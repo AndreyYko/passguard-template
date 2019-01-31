@@ -1,0 +1,98 @@
+form.password-generate-form
+  width: 100%
+  .password-generate-options
+    width: 100%
+    display: flex
+    margin-bottom: 10px
+    @media (max-width: $resp-border)
+      flex-direction: column
+    .password-generate-options-group
+      display: flex
+      flex-direction: column
+      flex: 1
+      &:nth-child(2)
+        margin: 0 15px
+      @media (max-width: $resp-border)
+        margin-bottom: 15px
+        &:nth-child(2)
+          margin: 0 0 15px 0
+        &:last-child
+          margin: 0
+      label
+        font-size: 1em
+        font-weight: 700
+        margin-bottom: 10px
+      input[type="number"]
+        font-size: 0.9em
+        border: 1px solid $black-opacity
+        -webkit-border-radius: $border-radius-default
+        -moz-border-radius: $border-radius-default
+        border-radius: $border-radius-default
+        padding: 8px 10px
+        outline-color: $orange-default
+  .password-generate-checkboxes
+    display: flex
+    flex-direction: column
+    margin-bottom: 15px
+    .password-generate-checkboxes-group
+      cursor: default
+      label
+        font-size: 0.9em
+  .password-generate-buttons
+    display: flex
+    @media (max-width: $resp-border)
+      flex-direction: column
+      margin-bottom: 15px
+
+form.settings-account-details-form
+  display: flex
+  flex-direction: column
+  width: 50%
+  &.top-margin
+    margin-top: 20px
+  .settings-account-details-form-group
+    display: flex
+    flex-direction: column
+    margin-bottom: 10px
+    &.last
+      margin-bottom: 15px
+    label
+      font-size: 0.9em
+      font-weight: 700
+      margin-bottom: 8px
+    input[type="text"],
+    input[type="password"]
+      font-size: 0.9em
+      border: 1px solid $black-opacity
+      -webkit-border-radius: $border-radius-default
+      -moz-border-radius: $border-radius-default
+      border-radius: $border-radius-default
+      padding: 6px 10px
+      outline-color: $orange-default
+  @media (max-width: 1000px)
+    width: 100%
+
+form.add-item-form
+  width: 100%
+  display: flex
+  flex-direction: column
+  .add-item-form-group-double
+    width: 100%
+  .add-item-form-group
+    width: 50%
+    display: flex
+    flex-direction: column
+    label
+      font-size: 0.9em
+      font-weight: 700
+      margin-bottom: 8px
+    input[type="text"],
+    input[type="password"],
+    select
+      font-size: 0.9em
+      border: 1px solid $black-opacity
+      -webkit-border-radius: $border-radius-default
+      -moz-border-radius: $border-radius-default
+      border-radius: $border-radius-default
+      padding: 6px 10px
+      outline-color: $orange-default

@@ -99,10 +99,19 @@ main
     padding-bottom: 0.6rem
     border-bottom: 1px solid $gray-light-v3
     box-sizing: content-box
+    margin-bottom: 10px
+    &.big-bottom-margin
+      margin-bottom: 20px
+    &.settings-danger-zone
+      color: $red
+      border-bottom: none
     h1
       font-size: 1.5em
       font-weight: $text-regular
       line-height: 27px
+      @media (max-width: $resp-border)
+        font-size: 1.1em
+        font-weight: 700
     .buttons
       display: flex
       position: relative
@@ -188,3 +197,108 @@ section.settings-drop-down
           margin-bottom: 15px
         li
           height: 25px
+
+span.password-generate-area
+  width: 100%
+  height: 60px
+  display: flex
+  justify-content: center
+  align-items: center
+  border-radius: $border-radius-default
+  background-color: $black-super-opacity
+  border: 1px solid $black-opacity
+  margin: 15px 0
+  span.password-number
+    color: $orange-default
+
+.settings-account-details-wrapper
+  display: flex
+  margin-bottom: 50px
+  form
+    flex: 1
+  .settings-account-details-picture-wrapper
+    flex: 1
+    display: flex
+    justify-content: center
+    align-items: center
+    @media (max-width: 1000px)
+      margin-top: 20px
+    .settings-account-details-picture-bg
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 150px
+      height: 150px
+      background-color: pink
+      -webkit-border-radius: 50%
+      -moz-border-radius: 50%
+      border-radius: 50%
+      .settings-account-details-picture-text
+        font-size: 3em
+        color: #fff
+        -webkit-user-select: none
+        -moz-user-select: none
+        -ms-user-select: none
+        user-select: none
+
+  @media (max-width: 1000px)
+    flex-direction: column
+    form
+      order: 1
+    .settings-account-details-picture-wrapper
+      order: 0
+      margin-bottom: 20px
+
+.settings-change-email-wrapper
+  margin-bottom: 50px
+
+.settings-change-password-wrapper
+  margin-bottom: 50px
+
+.settings-danger-zone-wrapper
+  width: 100%
+  display: flex
+  flex-direction: column
+  border: 1px solid $red
+  -webkit-border-radius: $border-radius-default
+  -moz-border-radius: $border-radius-default
+  border-radius: $border-radius-default
+  padding: 25px 20px
+  margin-bottom: 50px
+  p
+    font-size: 0.9em
+    margin-bottom: 10px
+  .buttons
+    display: flex
+    @media (max-width: 1000px)
+      flex-direction: column
+
+.settings-new-organization-form-wrapper
+  width: 100%
+  display: flex
+  flex-direction: column
+  p
+    font-size: 0.85em
+    margin-bottom: 20px
+
+section.add-item-popup
+  position: fixed
+  width: 100vw
+  height: 100vh
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: $black-opacity
+  z-index: 1
+  .add-item-form-wrapper
+    width: 60%
+    background-color: #fff
+    padding: 15px 0 0 0
+    border-radius: $border-radius-default
+    h1
+      font-size: 1.3em
+      font-weight: $text-regular
+      text-transform: uppercase
+      border-bottom: 1px solid $black-opacity
+      padding: 0 15px 15px 15px
+      margin-bottom: 20px
