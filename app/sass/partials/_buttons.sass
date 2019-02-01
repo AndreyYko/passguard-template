@@ -9,3 +9,81 @@ button.open-mobile-menu
     height: 3px
     background-color: #fff
     border-radius: 15%
+
+button.default-button
+  padding: 3.5px 7px
+  background-color: $gray-light-v2
+  border: 1px solid $gray-middle-v2
+  -webkit-border-radius: 0.2rem
+  -moz-border-radius: 0.2rem
+  border-radius: 0.2rem
+  color: $gray-middle
+  cursor: pointer
+  font-weight: $text-bold
+  transition: all 0.2s
+  &:hover
+    background-color: $gray-middle-v2
+  &.add-item
+    color: $orange-default
+    &:hover
+      color: #fff
+      background-color: $orange-default
+      border-color: $orange-default
+
+button.right-container-add-organization
+  border: 1px solid $black-opacity
+  background-color: $gray-light-v2
+  width: 100%
+  padding: 6px 0
+  -webkit-border-radius: $border-radius-default
+  -moz-border-radius: $border-radius-default
+  border-radius: $border-radius-default
+  color: $orange-default
+  cursor: pointer
+  margin-top: 10px
+  transition: 0.2s
+  &:hover
+    background-color: $orange-default
+    color: $gray-light-v2
+  &.bottom-margin
+    margin-bottom: 15px
+  span
+    font-size: 1.3em
+    font-weight: 700
+
+button.default-middle-content-form-button
+  font-size: 0.9em
+  font-weight: 700
+  border: 1px solid $black-opacity
+  -webkit-border-radius: $border-radius-default
+  -moz-border-radius: $border-radius-default
+  border-radius: $border-radius-default
+  padding: 5px 10px
+  margin-right: 5px
+  color: $gray-dark
+  cursor: pointer
+  transition: 0.2s
+  &:hover
+    opacity: 0.9
+  &:last-child
+    margin-right: 0
+  &.fit-content-width
+    max-width: fit-content
+    @media (max-width: 1000px)
+      max-width: 100%
+  &.orange
+    border-color: $orange-default
+    background-color: $orange-default
+    color: #fff
+  &.danger
+    color: $red
+    &:hover
+      background-color: $red
+      color: #fff
+  @media (max-width: $resp-border)
+    height: 50px
+  @media (max-width: 1000px)
+    margin-right: 0
+    margin-bottom: 10px
+    &:last-child
+      margin-bottom: 0

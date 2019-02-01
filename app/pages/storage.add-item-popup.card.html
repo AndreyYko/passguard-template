@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+<section class="add-item-popup">
+  <div class="add-item-form-wrapper">
+    <h1>Add Item</h1>
+    <form class="add-item-form">
+      <div class="add-item-form-group select">
+        <label for="add-item-form-item-type">What type of item is this?</label>
+        <select name="type" id="add-item-form-item-type">
+          <option value="login">Login</option>
+          <option value="card">Card</option>
+          <option value="identity">Identity</option>
+          <option value="note">Secure Note</option>
+        </select>
+      </div>
+    </form>
+    <!-- Form for login item -->
+    <form class="add-item-form">
+      <div class="add-item-form-group-double">
+        <div class="add-item-form-group">
+          <label for="add-item-form-item-name">Name</label>
+          <input type="text" id="add-item-form-item-name">
+        </div>
+        <div class="add-item-form-group select">
+          <label for="add-item-form-item-ownership">Who owns this item?</label>
+          <select id="add-item-form-item-ownership">
+            <option value="email">andrushagalushka@gmail.com</option>
+          </select>
+        </div>
+      </div>
+      <div class="add-item-form-group-double">
+        <div class="add-item-form-group">
+          <label for="add-item-form-item-cardholder">Cardholder Name</label>
+          <input type="text" id="add-item-form-item-cardholder">
+        </div>
+        <div class="add-item-form-group select">
+          <label for="add-item-form-item-brand">Brand</label>
+          <select id="add-item-form-item-brand">
+            <option value="Visa">Visa</option>
+            <option value="Mastercard">Mastercard</option>
+          </select>
+        </div>
+      </div>
+      <div class="add-item-form-group-double">
+        <div class="add-item-form-group">
+          <label for="add-item-form-item-card-number">Card Number</label>
+          <input type="text" id="add-item-form-item-card-number">
+        </div>
+        <div class="add-item-form-group">
+          <div class="add-item-form-group-double">
+            <div class="add-item-form-group">
+              <label for="add-item-form-item-card-expiration-date">Expiration Date</label>
+              <input type="text" id="add-item-form-item-card-expiration-date">
+            </div>
+            <div class="add-item-form-group">
+              <label for="add-item-form-item-card-cvv">CVV</label>
+              <input type="password" id="add-item-form-item-card-cvv" maxlength="3">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="add-item-form-group textarea">
+        <label for="">Notes</label>
+        <textarea id="" rows="6"></textarea>
+      </div>
+      <div class="add-item-form-submit-group">
+        <button type="submit" class="default-middle-content-form-button orange fit-content-width">Save</button>
+        <button type="button" class="default-middle-content-form-button fit-content-width">Cancel</button>
+      </div>
+    </form>
+  </div>
+</section>
+<section class="mobile mobile-menu">
+  <!--Mobile menu top side-->
+  <div>
+      <span class="logo">
+        <i class="fas fa-shield-alt icon mobile-logo"></i>
+        <span>PassGuard</span>
+      </span>
+    <nav>
+      <ul class="mobile-navigation">
+        <li>
+          <a href="" class="mobile-navigation-link">
+            <i class="far fa-hdd mobile-nav-icon"></i>
+            <span>Storage</span>
+          </a>
+        </li>
+        <li>
+          <a href="" class="mobile-navigation-link">
+            <i class="fas fa-wrench mobile-nav-icon"></i>
+            <span>Tools</span>
+          </a>
+        </li>
+        <li>
+          <a href="" class="mobile-navigation-link">
+            <i class="fas fa-sliders-h mobile-nav-icon"></i>
+            <span>Settings</span>
+          </a>
+        </li>
+      </ul>
+      <span class="divider"></span>
+      <ul class="mobile-navigation">
+        <li>
+          <a href="" class="mobile-navigation-link">
+            <i class="far fa-user mobile-nav-icon"></i>
+            <span>Account</span>
+          </a>
+        </li>
+        <li>
+          <a href="" class="mobile-navigation-link">
+            <i class="fas fa-question mobile-nav-icon"></i>
+            <span>Get help</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!--Mobile menu bottom side-->
+  <div>
+    <nav>
+      <ul class="mobile-navigation">
+        <li>
+          <a href="" class="mobile-navigation-link">
+            <i class="fas fa-lock mobile-nav-icon"></i>
+            <span>Lock</span>
+          </a>
+        </li>
+        <li>
+          <a href="" class="mobile-navigation-link">
+            <i class="fas fa-sign-out-alt mobile-nav-icon"></i>
+            <span>Log out</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</section>
+<section class="page-content">
+  <!--Header-->
+  <header>
+    <!--PC header-->
+    <nav class="pc">
+      <ul class="header-navigation">
+        <li class="active">
+          <i class="fas fa-shield-alt icon"></i>
+        </li>
+        <li class="active">
+          <a href="/" class="default-link">Storage</a>
+        </li>
+        <li>
+          <a href="/pages/tools.html" class="default-link">Tools</a>
+        </li>
+        <li>
+          <a href="/pages/settings.html" class="default-link">Settings</a>
+        </li>
+      </ul>
+      <ul class="header-navigation">
+        <li class="user-icons">
+            <span class="user-icon-wrapper">
+              <i class="fas fa-user user-icon"></i>
+            </span>
+          <span class="icon-arrow"></span>
+        </li>
+        <section class="drop-down user-drop-down">
+          <nav>
+            <ul class="mobile-navigation">
+              <li class="signed-us-wrapper">
+                  <span class="mobile-navigation-link">
+                    <span class="mobile-nav-icon signed-us-icon">A</span>
+                    <div>
+                      <span class="signed-us-label">Signed as</span>
+                      <span class="signed-us-value">Andrii</span>
+                    </div>
+                  </span>
+              </li>
+              <span class="divider"></span>
+              <li>
+                <a href="" class="mobile-navigation-link">
+                  <i class="far fa-user mobile-nav-icon"></i>
+                  <span>Account</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="mobile-navigation-link">
+                  <i class="fas fa-question mobile-nav-icon"></i>
+                  <span>Get help</span>
+                </a>
+              </li>
+              <span class="divider"></span>
+              <li>
+                <a href="" class="mobile-navigation-link">
+                  <i class="fas fa-lock mobile-nav-icon"></i>
+                  <span>Lock</span>
+                </a>
+              </li>
+              <li>
+                <a href="" class="mobile-navigation-link">
+                  <i class="fas fa-sign-out-alt mobile-nav-icon"></i>
+                  <span>Log out</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </section>
+      </ul>
+    </nav>
+    <!--Mobile header-->
+    <nav class="mobile">
+      <ul class="header-navigation">
+        <li class="active">
+          <button class="open-mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </li>
+        <li class="active">
+          <span class="default-link">Storage</span>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <!--Content-->
+  <main>
+    <section class="container left-container">
+      <h2 class="title">
+        <span>Filters</span>
+      </h2>
+      <span class="divider"></span>
+      <div class="side-content-wrapper">
+        <form class="left-container-search">
+          <input
+            type="text"
+            placeholder="Search in storage"
+            class="input-default"
+          >
+        </form>
+        <ul class="default-list first">
+          <li class="active">
+            <i class="fas fa-table"></i>
+            <span>All elements</span>
+          </li>
+          <li>
+            <i class="fas fa-star"></i>
+            <span>Favorite</span>
+          </li>
+        </ul>
+        <ul class="default-list">
+          <h3>Elements type</h3>
+          <li>
+            <i class="fas fa-globe"></i>
+            <span>Login</span>
+          </li>
+          <li>
+            <i class="far fa-credit-card"></i>
+            <span>Card</span>
+          </li>
+          <li>
+            <i class="far fa-id-card"></i>
+            <span>ID Card</span>
+          </li>
+          <li>
+            <i class="far fa-sticky-note"></i>
+            <span>Secure note</span>
+          </li>
+        </ul>
+        <ul class="default-list list-arrow">
+          <h3>Collections</h3>
+          <li>
+            <i class="fas fa-caret-right"></i>
+            <span>Collection 1</span>
+          </li>
+          <li>
+            <i class="fas fa-caret-right"></i>
+            <span>Collection 2</span>
+          </li>
+          <li>
+            <i class="fas fa-caret-right"></i>
+            <span>Collection 3</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="container middle-container">
+      <!-- Middle container mobile lists with side containers content -->
+      <div class="mobile-sides-containers-content">
+        <!-- Filters container -->
+        <div class="list-wrapper">
+          <div class="header">
+            <h2>Filters</h2>
+            <i class="fas fa-caret-down"></i>
+          </div>
+          <div class="side-content-wrapper mobile">
+            <form class="left-container-search">
+              <input
+                type="text"
+                placeholder="Search in storage"
+                class="input-default"
+              >
+            </form>
+            <ul class="default-list first">
+              <li class="active">
+                <i class="fas fa-table"></i>
+                <span>All elements</span>
+              </li>
+              <li>
+                <i class="fas fa-star"></i>
+                <span>Favorite</span>
+              </li>
+            </ul>
+            <ul class="default-list">
+              <h3>Elements type</h3>
+              <li>
+                <i class="fas fa-globe"></i>
+                <span>Login</span>
+              </li>
+              <li>
+                <i class="far fa-credit-card"></i>
+                <span>Card</span>
+              </li>
+              <li>
+                <i class="far fa-id-card"></i>
+                <span>ID Card</span>
+              </li>
+              <li>
+                <i class="far fa-sticky-note"></i>
+                <span>Secure note</span>
+              </li>
+            </ul>
+            <ul class="default-list list-arrow">
+              <h3>Collections</h3>
+              <li>
+                <i class="fas fa-caret-right"></i>
+                <span>Collection 1</span>
+              </li>
+              <li>
+                <i class="fas fa-caret-right"></i>
+                <span>Collection 2</span>
+              </li>
+              <li>
+                <i class="fas fa-caret-right"></i>
+                <span>Collection 3</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- Organizations container -->
+        <div class="list-wrapper">
+          <div class="header">
+            <h2>Organizations</h2>
+            <i class="fas fa-caret-down"></i>
+          </div>
+          <div class="side-content-wrapper">
+            <ul class="default-list list-arrow first">
+              <li>
+                <i class="fas fa-caret-right"></i>
+                <span>Organization 1</span>
+              </li>
+              <li>
+                <i class="fas fa-caret-right"></i>
+                <span>Organization 2</span>
+              </li>
+            </ul>
+            <button class="right-container-add-organization bottom-margin">
+              <i class="fas fa-plus"></i>
+              <span>New organization</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Middle container header -->
+      <div class="middle-container-header">
+        <h1>Storage</h1>
+        <div class="buttons">
+          <div class="settings-container">
+            <button class="default-button settings">
+              <i class="fas fa-cog"></i>
+              <i class="fas fa-caret-down"></i>
+            </button>
+            <section class="drop-down settings-drop-down">
+              <ul>
+                <li class="delete">
+                  <i class="fas fa-trash-alt mobile-nav-icon"></i>
+                  <span>Delete selected</span>
+                </li>
+                <span class="divider"></span>
+                <li>
+                  <i class="fas fa-check-square mobile-nav-icon"></i>
+                  <span>Check all</span>
+                </li>
+                <li>
+                  <i class="far fa-check-square mobile-nav-icon"></i>
+                  <span>Uncheck all</span>
+                </li>
+              </ul>
+            </section>
+          </div>
+          <button class="default-button add-item">
+            <i class="fas fa-plus"></i>
+            <span>Add Item</span>
+          </button>
+        </div>
+      </div>
+      <!-- Middle container content -->
+      <div class="middle-container-content">
+      </div>
+    </section>
+    <section class="container right-container">
+      <h2 class="title">
+        <span>Organizations</span>
+      </h2>
+      <span class="divider"></span>
+      <div class="side-content-wrapper">
+        <ul class="default-list list-arrow first">
+          <li>
+            <i class="fas fa-caret-right"></i>
+            <span>Organization 1</span>
+          </li>
+          <li>
+            <i class="fas fa-caret-right"></i>
+            <span>Organization 2</span>
+          </li>
+        </ul>
+        <button class="right-container-add-organization">
+          <i class="fas fa-plus"></i>
+          <span>New organization</span>
+        </button>
+      </div>
+    </section>
+  </main>
+  <!--Footer-->
+  <footer>
+    <span class="divider"></span>
+    <div class="footer-content">
+      <span>© 2018, 16bit CHSBC</span>
+      <span>Version 1.0.0</span>
+    </div>
+  </footer>
+</section>
+</body>
+</html>

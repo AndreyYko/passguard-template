@@ -2,10 +2,15 @@ section.mobile-menu
   flex-direction: column
   justify-content: space-between
   align-items: flex-end
-  min-width: 0
-  max-width: 70vw
+  width: 0
   height: 100vh
   border-right: 0 solid $gray-light
+  position: relative
+  z-index: 11
+  background-color: #fff
+  &.opened
+    width: 70vw
+    max-width: 290px
   .logo
     width: 100%
     height: 150px
@@ -18,7 +23,8 @@ section.mobile-menu
       font-weight: $text-bold
       font-size: 1.5em
   div
-    min-width: calc(70vw - 2px)
+    width: calc(70vw - 2px)
+    max-width: 288px
   .divider
     width: 95%
     margin-left: 5%
@@ -32,24 +38,30 @@ section.mobile-menu.opened
   border-right-width: 2px
 
 .mobile
-  @media (max-width: 425px)
+  @media (max-width: $resp-border)
     display: flex
-  @media (min-width: 426px)
+  @media (min-width: $resp-border)
     display: none
 
 .pc
-  @media (max-width: 425px)
+  max-width: 980px
+  @media (max-width: $resp-border)
     display: none
-  @media (min-width: 426px)
+  @media (min-width: $resp-border)
     display: flex
 
 section.page-content
   min-width: 100%
+  display: flex
+  align-items: center
+  flex-direction: column
 
 section.drop-down
   display: none
   position: absolute
   border-radius: $border-radius-default
+  &.opened
+    display: block
   
 section.user-drop-down
   top: 35px
@@ -66,9 +78,8 @@ section.user-drop-down
 
 main
   width: 100%
+  max-width: 980px
   min-height: calc(100vh - 176px)
-  @media (min-width: 1000px)
-    padding: 0 15%
   @media (max-width: 1000px)
     padding: 0 5%
   display: flex
@@ -79,15 +90,47 @@ main
 
 .middle-container
   width: 100%
-  background-color: pink
+  padding: 0 15px
+  @media (max-width: $resp-border)
+    padding: 0
+  &-header
+    width: 100%
+    height: 27px
+    display: flex
+    justify-content: space-between
+    color: $gray-dark
+    padding-bottom: 0.6rem
+    border-bottom: 1px solid $gray-light-v3
+    box-sizing: content-box
+    margin-bottom: 10px
+    &.big-bottom-margin
+      margin-bottom: 20px
+    &.settings-danger-zone
+      color: $red
+      border-bottom: none
+    h1
+      font-size: 1.5em
+      font-weight: $text-regular
+      line-height: 27px
+      @media (max-width: $resp-border)
+        font-size: 1.1em
+        font-weight: 700
+    .buttons
+      display: flex
+      position: relative
+
+  &-content
+    width: 100%
 
 .left-container,
 .right-container
   max-width: calc(25% - 2px)
+  max-height: fit-content
   border: 1px solid $black-opacity
-  border-radius: $border-radius-default $border-radius-default 0 0
-  border-bottom: 0
+  border-radius: $border-radius-default
   overflow: hidden
+  @media (max-width: $resp-border)
+    display: none
   .title
     height: 40px
     background-color: $black-super-opacity
@@ -106,3 +149,173 @@ main
   &-search
     margin-bottom: 15px
 
+.settings-container
+  position: relative
+  margin-right: 7px
+
+section.settings-drop-down
+  top: 30px
+  right: 0
+  border: 1px solid $black-opacity
+  background-color: #fff
+
+.mobile-sides-containers-content
+  width: 100%
+  margin-bottom: 20px
+  @media (min-width: $resp-border)
+    display: none
+  .list-wrapper
+    width: 100%
+    background-color: $gray-light-v2
+    min-height: 50px
+    border: 1px solid $gray-middle-v2
+    -webkit-border-radius: $border-radius-default
+    -moz-border-radius: $border-radius-default
+    border-radius: $border-radius-default
+    padding: 0 15px
+    &:first-child
+      margin-bottom: 10px
+    .header
+      width: 100%
+      height: 50px
+      display: flex
+      justify-content: space-between
+      align-items: center
+      h2
+        font-size: 1em
+        font-weight: $text-bold
+        color: $gray-dark
+    .side-content-wrapper
+      display: none
+      flex-direction: column
+      align-items: center
+      &.opened
+        display: flex
+      form
+        width: 100%
+      h3
+        text-align: center
+      ul
+        &:last-child
+          margin-bottom: 15px
+        li
+          height: 25px
+
+span.password-generate-area
+  width: 100%
+  height: 60px
+  display: flex
+  justify-content: center
+  align-items: center
+  border-radius: $border-radius-default
+  background-color: $black-super-opacity
+  border: 1px solid $black-opacity
+  margin: 15px 0
+  span.password-number
+    color: $orange-default
+
+.settings-account-details-wrapper
+  display: flex
+  margin-bottom: 50px
+  form
+    flex: 1
+  .settings-account-details-picture-wrapper
+    flex: 1
+    display: flex
+    justify-content: center
+    align-items: center
+    @media (max-width: 1000px)
+      margin-top: 20px
+    .settings-account-details-picture-bg
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 150px
+      height: 150px
+      background-color: pink
+      -webkit-border-radius: 50%
+      -moz-border-radius: 50%
+      border-radius: 50%
+      .settings-account-details-picture-text
+        font-size: 3em
+        color: #fff
+        -webkit-user-select: none
+        -moz-user-select: none
+        -ms-user-select: none
+        user-select: none
+
+  @media (max-width: 1000px)
+    flex-direction: column
+    form
+      order: 1
+    .settings-account-details-picture-wrapper
+      order: 0
+      margin-bottom: 20px
+
+.settings-change-email-wrapper
+  margin-bottom: 50px
+
+.settings-change-password-wrapper
+  margin-bottom: 50px
+
+.settings-danger-zone-wrapper
+  width: 100%
+  display: flex
+  flex-direction: column
+  border: 1px solid $red
+  -webkit-border-radius: $border-radius-default
+  -moz-border-radius: $border-radius-default
+  border-radius: $border-radius-default
+  padding: 25px 20px
+  margin-bottom: 50px
+  p
+    font-size: 0.9em
+    margin-bottom: 10px
+  .buttons
+    display: flex
+    @media (max-width: 1000px)
+      flex-direction: column
+
+.settings-new-organization-form-wrapper
+  width: 100%
+  display: flex
+  flex-direction: column
+  p
+    font-size: 0.85em
+    margin-bottom: 20px
+
+section.add-item-popup
+  width: 100vw
+  height: 100vh
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: $black-opacity
+  overflow-y: auto
+  position: fixed
+  z-index: 1
+  @media (max-width: $resp-border)
+    background-color: transparent
+    align-items: flex-start
+    height: calc(100vh - 56px)
+    position: absolute
+    top: 56px
+  .add-item-form-wrapper
+    width: 60%
+    max-width: 800px
+    background-color: #fff
+    padding: 15px 0 0 0
+    border-radius: $border-radius-default
+    @media (max-width: $resp-border)
+      width: 100%
+      max-width: 100%
+      -webkit-border-radius: 0
+      -moz-border-radius: 0
+      border-radius: 0
+    h1
+      font-size: 1.3em
+      font-weight: $text-regular
+      text-transform: uppercase
+      border-bottom: 1px solid $black-opacity
+      padding: 0 15px 15px 15px
+      margin-bottom: 20px
