@@ -55,6 +55,8 @@ section.page-content
   display: flex
   align-items: center
   flex-direction: column
+  &.auth
+    background-color: $gray-light-v5
 
 section.drop-down
   display: none
@@ -80,10 +82,12 @@ main
   width: 100%
   max-width: 980px
   min-height: calc(100vh - 176px)
-  @media (max-width: 1000px)
-    padding: 0 5%
   display: flex
   justify-content: space-between
+  @media (max-width: 1000px)
+    padding: 0 5%
+  &.auth
+    min-height: 100vh
 
 .container
   flex: 1
@@ -319,3 +323,21 @@ section.add-item-popup
       border-bottom: 1px solid $black-opacity
       padding: 0 15px 15px 15px
       margin-bottom: 20px
+
+section.auth-wrapper
+  display: flex
+  flex-direction: column
+  align-items: center
+  width: 100%
+  .auth-logo
+    width: 100%
+    font-size: 2.5em
+    font-weight: 700
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-bottom: 10px
+  p
+    text-align: center
+    font-size: 1em
+    margin-bottom: 20px

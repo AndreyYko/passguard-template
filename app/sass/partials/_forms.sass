@@ -155,3 +155,53 @@ form.add-item-form
       border-top: 0
       background-color: #fff
       padding-top: 0
+
+form.auth-form
+  width: 100%
+  max-width: 360px
+  background-color: #fff
+  padding: 15px
+  box-sizing: content-box
+  border: 1px solid $black-opacity
+  -webkit-border-radius: $border-radius-default
+  -moz-border-radius: $border-radius-default
+  border-radius: $border-radius-default
+  .auth-form-group
+    display: flex
+    flex-direction: column
+    margin-bottom: 15px
+    &:last-child
+      margin-bottom: 0
+    label
+      font-size: 0.9em
+      font-weight: 700
+      margin-bottom: 8px
+      white-space: nowrap
+    input[type="text"],
+    input[type="email"],
+    input[type="password"]
+      font-size: 0.9em
+      border: 1px solid $black-opacity
+      -webkit-border-radius: $border-radius-default
+      -moz-border-radius: $border-radius-default
+      border-radius: $border-radius-default
+      padding: 6px 10px
+      outline-color: $orange-default
+      background-color: $gray-light-v2
+    &.password
+      position: relative
+      input
+        width: calc(100% - 50px)
+      &::after
+        content: ""
+        position: absolute
+        top: 33px
+        right: 13px
+        display: block
+        width: 20px
+        height: 20px
+        background-image: url("../../assets/images/eye-solid.svg")
+        -webkit-background-size: 100%
+        background-size: 100%
+        background-position: 0 0
+        cursor: pointer
