@@ -5,6 +5,9 @@ section.mobile-menu
   width: 0
   height: 100vh
   border-right: 0 solid $gray-light
+  position: relative
+  z-index: 11
+  background-color: #fff
   &.opened
     width: 70vw
     max-width: 290px
@@ -282,19 +285,33 @@ span.password-generate-area
     margin-bottom: 20px
 
 section.add-item-popup
-  position: fixed
   width: 100vw
   height: 100vh
   display: flex
   justify-content: center
   align-items: center
   background-color: $black-opacity
+  overflow-y: auto
+  position: fixed
   z-index: 1
+  @media (max-width: $resp-border)
+    background-color: transparent
+    align-items: flex-start
+    height: calc(100vh - 56px)
+    position: absolute
+    top: 56px
   .add-item-form-wrapper
     width: 60%
+    max-width: 800px
     background-color: #fff
     padding: 15px 0 0 0
     border-radius: $border-radius-default
+    @media (max-width: $resp-border)
+      width: 100%
+      max-width: 100%
+      -webkit-border-radius: 0
+      -moz-border-radius: 0
+      border-radius: 0
     h1
       font-size: 1.3em
       font-weight: $text-regular

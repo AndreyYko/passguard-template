@@ -14,20 +14,47 @@
   <div class="add-item-form-wrapper">
     <h1>Add Item</h1>
     <form class="add-item-form">
+      <div class="add-item-form-group select">
+        <label for="add-item-form-item-type">What type of item is this?</label>
+        <select name="type" id="add-item-form-item-type">
+          <option value="login">Login</option>
+          <option value="card">Card</option>
+          <option value="identity">Identity</option>
+          <option value="note">Secure Note</option>
+        </select>
+      </div>
+    </form>
+    <!-- Form for login item -->
+    <form class="add-item-form">
       <div class="add-item-form-group-double">
         <div class="add-item-form-group">
-          <label for="add-item-form-item-type">What type of item is this?</label>
-          <select name="type" id="add-item-form-item-type">
-            <option value="login">Login</option>
-            <option value="card">Card</option>
-            <option value="identity">Identity</option>
-            <option value="note">Secure Note</option>
-          </select>
-        </div>
-        <div class="add-item-form-group">
-          <label for="add-item-form-item-name"></label>
+          <label for="add-item-form-item-name">Name</label>
           <input type="text" id="add-item-form-item-name">
         </div>
+        <div class="add-item-form-group select">
+          <label for="add-item-form-item-ownership">Who owns this item?</label>
+          <select id="add-item-form-item-ownership">
+            <option value="email">andrushagalushka@gmail.com</option>
+          </select>
+        </div>
+      </div>
+      <div class="add-item-form-group-double">
+        <div class="add-item-form-group">
+          <label for="add-item-form-item-login">Username</label>
+          <input type="text" id="add-item-form-item-login">
+        </div>
+        <div class="add-item-form-group">
+          <label for="add-item-form-item-password">Password</label>
+          <input type="password" id="add-item-form-item-password">
+        </div>
+      </div>
+      <div class="add-item-form-group textarea">
+        <label for="">Notes</label>
+        <textarea id="" rows="6"></textarea>
+      </div>
+      <div class="add-item-form-submit-group">
+        <button type="submit" class="default-middle-content-form-button orange fit-content-width">Save</button>
+        <button type="button" class="default-middle-content-form-button fit-content-width">Cancel</button>
       </div>
     </form>
   </div>

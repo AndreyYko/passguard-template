@@ -148,7 +148,7 @@ button.default-middle-content-form-button.danger:hover {
   color: #fff;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   button.default-middle-content-form-button {
     height: 50px;
   }
@@ -171,6 +171,9 @@ section.mobile-menu {
   width: 0;
   height: 100vh;
   border-right: 0 solid #eee;
+  position: relative;
+  z-index: 11;
+  background-color: #fff;
 }
 
 section.mobile-menu.opened {
@@ -213,13 +216,13 @@ section.mobile-menu.opened {
   border-right-width: 2px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .mobile {
     display: flex;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   .mobile {
     display: none;
   }
@@ -229,13 +232,13 @@ section.mobile-menu.opened {
   max-width: 980px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .pc {
     display: none;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   .pc {
     display: flex;
   }
@@ -301,7 +304,7 @@ main {
   padding: 0 15px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .middle-container {
     padding: 0;
   }
@@ -334,7 +337,7 @@ main {
   line-height: 27px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .middle-container-header h1 {
     font-size: 1.1em;
     font-weight: 700;
@@ -359,7 +362,7 @@ main {
   overflow: hidden;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .left-container,
   .right-container {
     display: none;
@@ -415,7 +418,7 @@ section.settings-drop-down {
   margin-bottom: 20px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   .mobile-sides-containers-content {
     display: none;
   }
@@ -595,21 +598,43 @@ span.password-generate-area span.password-number {
 }
 
 section.add-item-popup {
-  position: fixed;
   width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.125);
+  overflow-y: auto;
+  position: fixed;
   z-index: 1;
+}
+
+@media (max-width: 1000px) {
+  section.add-item-popup {
+    background-color: transparent;
+    align-items: flex-start;
+    height: calc(100vh - 56px);
+    position: absolute;
+    top: 56px;
+  }
 }
 
 section.add-item-popup .add-item-form-wrapper {
   width: 60%;
+  max-width: 800px;
   background-color: #fff;
   padding: 15px 0 0 0;
   border-radius: 5px;
+}
+
+@media (max-width: 1000px) {
+  section.add-item-popup .add-item-form-wrapper {
+    width: 100%;
+    max-width: 100%;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+  }
 }
 
 section.add-item-popup .add-item-form-wrapper h1 {
@@ -659,7 +684,7 @@ form.password-generate-form .password-generate-options {
   margin-bottom: 10px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   form.password-generate-form .password-generate-options {
     flex-direction: column;
   }
@@ -675,7 +700,7 @@ form.password-generate-form .password-generate-options .password-generate-option
   margin: 0 15px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   form.password-generate-form .password-generate-options .password-generate-options-group {
     margin-bottom: 15px;
   }
@@ -721,7 +746,7 @@ form.password-generate-form .password-generate-buttons {
   display: flex;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   form.password-generate-form .password-generate-buttons {
     flex-direction: column;
     margin-bottom: 15px;
@@ -779,23 +804,59 @@ form.add-item-form {
 
 form.add-item-form .add-item-form-group-double {
   width: 100%;
+  display: flex;
+}
+
+@media (max-width: 1000px) {
+  form.add-item-form .add-item-form-group-double {
+    flex-direction: column;
+  }
 }
 
 form.add-item-form .add-item-form-group {
   width: 50%;
   display: flex;
   flex-direction: column;
+  padding: 0 15px;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 1000px) {
+  form.add-item-form .add-item-form-group {
+    width: 100%;
+  }
+}
+
+form.add-item-form .add-item-form-group.select:after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-image: url("../../assets/images/caret-down-solid.svg");
+  background-repeat: no-repeat;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  background-position: 0 0;
+  position: absolute;
+  right: 28px;
+  top: 42px;
+}
+
+form.add-item-form .add-item-form-group.textarea {
+  width: 100%;
 }
 
 form.add-item-form .add-item-form-group label {
   font-size: 0.9em;
   font-weight: 700;
   margin-bottom: 8px;
+  white-space: nowrap;
 }
 
 form.add-item-form .add-item-form-group input[type="text"],
 form.add-item-form .add-item-form-group input[type="password"],
-form.add-item-form .add-item-form-group select {
+form.add-item-form .add-item-form-group textarea {
   font-size: 0.9em;
   border: 1px solid rgba(0, 0, 0, 0.125);
   -webkit-border-radius: 5px;
@@ -803,6 +864,58 @@ form.add-item-form .add-item-form-group select {
   border-radius: 5px;
   padding: 6px 10px;
   outline-color: #f4a53d;
+  resize: none;
+}
+
+form.add-item-form .add-item-form-group select {
+  width: 100%;
+  height: 33px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 0 10px;
+  font-size: 0.9em;
+}
+
+form.add-item-form .add-item-form-group .add-item-form-group-double .add-item-form-group {
+  margin-bottom: 0;
+}
+
+form.add-item-form .add-item-form-group .add-item-form-group-double .add-item-form-group:first-child {
+  padding-left: 0;
+}
+
+form.add-item-form .add-item-form-group .add-item-form-group-double .add-item-form-group:last-child {
+  padding-right: 0;
+}
+
+@media (max-width: 1000px) {
+  form.add-item-form .add-item-form-group .add-item-form-group-double .add-item-form-group {
+    padding: 0;
+  }
+  form.add-item-form .add-item-form-group .add-item-form-group-double .add-item-form-group:first-child {
+    margin-bottom: 15px;
+  }
+}
+
+form.add-item-form .add-item-form-submit-group {
+  width: 100%;
+  display: flex;
+  padding: 15px;
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+@media (max-width: 1000px) {
+  form.add-item-form .add-item-form-submit-group {
+    flex-direction: column;
+    border-top: 0;
+    background-color: #fff;
+    padding-top: 0;
+  }
 }
 
 header {
@@ -847,7 +960,7 @@ footer .footer-content {
   align-items: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   footer .footer-content {
     flex-direction: column;
     justify-content: center;
@@ -859,7 +972,7 @@ footer .footer-content span {
   color: #333;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   footer .footer-content span:first-child {
     margin-bottom: 15px;
   }
