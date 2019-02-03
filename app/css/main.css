@@ -308,6 +308,16 @@ section.page-content {
           flex-direction: column;
 }
 
+section.page-content.auth {
+  background-color: #ecf0f5;
+}
+
+@media (max-width: 1000px) {
+  section.page-content.auth {
+    background-color: #fff;
+  }
+}
+
 section.drop-down {
   display: none;
   position: absolute;
@@ -358,6 +368,10 @@ main {
   main {
     padding: 0 5%;
   }
+}
+
+main.auth {
+  min-height: 100vh;
 }
 
 .container {
@@ -831,6 +845,83 @@ section.add-item-popup .add-item-form-wrapper h1 {
   margin-bottom: 20px;
 }
 
+section.auth-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+section.auth-wrapper .auth-logo {
+  width: 100%;
+  font-size: 2.5em;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+section.auth-wrapper p {
+  text-align: center;
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+section.auth-wrapper .footer-content {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+section.auth-wrapper .footer-content span {
+  font-size: 0.85em;
+  color: #333;
+}
+
+@media (max-width: 1000px) {
+  section.auth-wrapper .footer-content span:first-child {
+    margin-bottom: 15px;
+  }
+}
+
 mark.info-message {
   width: 100%;
   display: -webkit-box;
@@ -863,6 +954,39 @@ mark.info-message p {
 
 mark.info-message.warning h4 {
   color: #bf7e16;
+}
+
+.password-input-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.password-input-container input {
+  width: -webkit-calc(100% - 50px);
+  width: calc(100% - 50px);
+}
+
+.password-input-container .password-input-container-icon-wrapper {
+  width: 50px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #f4a53d;
 }
 
 form.password-generate-form {
@@ -1185,6 +1309,169 @@ form.add-item-form .add-item-form-submit-group {
   }
 }
 
+form.auth-form {
+  width: 100%;
+  max-width: 360px;
+  background-color: #fff;
+  padding: 15px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+@media (max-width: 1000px) {
+  form.auth-form {
+    border: none;
+  }
+}
+
+form.auth-form .auth-form-group {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 15px;
+}
+
+form.auth-form .auth-form-group:last-child {
+  margin-bottom: 0;
+}
+
+form.auth-form .auth-form-group label {
+  font-size: 0.9em;
+  font-weight: 700;
+  margin-bottom: 8px;
+  white-space: nowrap;
+}
+
+form.auth-form .auth-form-group input[type="text"],
+form.auth-form .auth-form-group input[type="email"],
+form.auth-form .auth-form-group input[type="password"] {
+  font-size: 0.9em;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  padding: 6px 10px;
+  outline-color: #f4a53d;
+  background-color: #fbfbfb;
+}
+
+form.auth-form .auth-form-group.password span {
+  font-size: 0.75em;
+  margin-top: 5px;
+  cursor: pointer;
+  color: #f4a53d;
+}
+
+form.auth-form .auth-form-group.checkbox {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+form.auth-form .auth-form-group.checkbox label {
+  margin-bottom: 0;
+  font-weight: 400;
+}
+
+form.auth-form .auth-form-group.checkbox input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+form.auth-form .auth-form-group.buttons {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+  padding-top: 10px;
+}
+
+@media (max-width: 1000px) {
+  form.auth-form .auth-form-group.buttons {
+    border: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+form.auth-form .auth-form-group.buttons button {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 30px;
+  font-weight: 700;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  color: #6c757d;
+  background-color: rgba(0, 0, 0, 0.03);
+  cursor: pointer;
+}
+
+form.auth-form .auth-form-group.buttons button:first-child {
+  margin-right: 10px;
+}
+
+form.auth-form .auth-form-group.buttons button.submit {
+  background-color: #f4a53d;
+  border-color: #f4a53d;
+  color: #fff;
+}
+
+@media (max-width: 1000px) {
+  form.auth-form .auth-form-group.buttons button {
+    width: 100%;
+    height: 50px;
+  }
+  form.auth-form .auth-form-group.buttons button:first-child {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+form.auth-form .auth-form-group.registration span {
+  font-size: 0.75em;
+  margin-top: 5px;
+  color: #6c757d;
+  cursor: default;
+}
+
+form.auth-form .auth-form-group.confirm-message p {
+  font-size: 0.75em;
+  color: #6c757d;
+  cursor: default;
+  text-align: left;
+  margin: 0;
+}
+
+form.auth-form .auth-form-group.confirm-message span {
+  font-size: 1em;
+  color: #f4a53d;
+}
+
 header {
   width: 100%;
   height: 56px;
@@ -1340,6 +1627,14 @@ footer .footer-content span {
 .settings-organizations-drop-down-list-icon {
   font-size: 0.9em;
   margin-right: 10px;
+}
+
+.auth-logo-icon {
+  margin-right: 20px;
+}
+
+.password-input-container-icon {
+  cursor: pointer;
 }
 
 .default-link {
